@@ -1,0 +1,72 @@
+
+/* Container for the popup */
+.popup-container {
+    margin: 0 auto;
+    width: 400px;
+    background-color: #301c12;
+    border-radius: 15px;
+  }
+  
+  /* Progress bar container */
+  .progressbar {
+    width: 340px;
+    padding: 30px;
+  }
+  
+  /* Close button style */
+  .close-btn {
+    color: #976d4f;
+  }
+  
+  /* Hover effect for close button */
+  .close-btn:hover {
+    cursor: pointer;
+  }
+  
+  /* Image styles */
+  .verified-image {
+    width: 30px;
+    height: 30px;
+  }
+  
+  /* Popup details layout */
+  .popup-details {
+    margin-top: 15px;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    justify-items: center;
+    align-items: end;
+    align-self: flex-end;
+  }
+  
+  /* Text container styles */
+  .text-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 10px;
+  }
+  
+  /* Text styles */
+  .text-container > h3 {
+    margin: 0;
+    margin-top: 30px;
+    align-items: end;
+    color: #ffffff;
+    text-align: left;
+  }
+  
+  /* Username field styles */
+  .text-container > .username-field {
+    background: linear-gradient(
+      to right,
+      #b98418 0%,
+      #bfad70 33%,
+      #b98418 66%,
+      #b98418 100%
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    display: inline-block;
+  }
+  

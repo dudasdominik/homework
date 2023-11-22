@@ -1,25 +1,42 @@
-import logo from './logo.svg';
+import { useState } from 'react';
 import './App.css';
+import ProgressBar from './ProgressBar';
+
 
 function App() {
+  const [isPopupVisible, setPopupVisibility] = useState(false);
+  const [isProgressBarRunning, setProgressBarRunning] = useState(false);
+  const [username, setUsername] = useState("");
+
+  function startProgressBar() {
+    setPopupVisibility(true);
+    setProgressBarRunning(true);
+
+    setTimeout(() => {
+      setPopupVisibility(false);
+    }, 5000);
+  }
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>Press the button for PopUp Progress bar</h1>
+      <button onClick={startProgressBar}>Click here</button>
+      <label>Username:</label>
+      <input
+        type="text"
+        onChange={(e) => setUsername(e.target.value)}
+        value={username}
+      />
+      <ProgressBar
+        isVisible={isPopupVisible}
+        setVisibility={setPopupVisibility}
+        isRunning={isProgressBarRunning}
+        username={username}
+      />
     </div>
   );
 }
 
 export default App;
+
+
